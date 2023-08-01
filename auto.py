@@ -4,7 +4,6 @@ from time import sleep
 import keyboard
 
 def start():
-      sleep(0.5)
       win32api.keybd_event(17, 0, 0, 0)#ctrl
       sleep(0.144)
       win32api.keybd_event(82, 0, 0, 0)#R
@@ -12,12 +11,13 @@ def start():
       win32api.keybd_event(82, 0, win32con.KEYEVENTF_KEYUP, 0)  # 释放按键R
       sleep(0.119)
       win32api.keybd_event(17, 0, win32con.KEYEVENTF_KEYUP, 0)  # 释放按键ctrl
-      sleep(0.86)
+      sleep(2)
       win32api.keybd_event(82, 0, 0, 0)#R
       sleep(0.08)
       win32api.keybd_event(82, 0, win32con.KEYEVENTF_KEYUP, 0)  # 释放按键R
+      sleep(3.0)
 
-conts=1
+conts=0
 while True:
       start()
       if keyboard.is_pressed('P'):
